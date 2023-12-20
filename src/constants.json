@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "title": "Bytes and Bytes",
+      "title": "Bits and Bytes",
       "description": "An interactive MDX-based blog website made using Next.Js",
       "github": "https://github.com/Rohanarora17/project-blog",
       "demo": "https://project-blog-sigma-ten.vercel.app/",
