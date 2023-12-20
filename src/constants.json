@@ -1,0 +1,89 @@
+{
+  "projects": [
+    {
+      "title": "Bytes and Bytes",
+      "description": "An interactive MDX-based blog website made using Next.Js",
+      "github": "https://github.com/Rohanarora17/project-blog",
+      "demo": "https://project-blog-sigma-ten.vercel.app/",
+      "image": "/blog.png"
+    },
+    {
+      "title": "Sesh",
+      "description": "A real time chat room made using NextJs and Socket.io",
+      "github": "https://github.com/Rohanarora17/sesh",
+      "demo": "https://chatzz.up.railway.app/",
+      "image": "/chat.png"
+    },
+    {
+      "title": "Toast Playground",
+      "description": "A website that lets you create and test various toast notifications",
+      "github": "https://github.com/Rohanarora17/toast-notification",
+      "demo": "https://652cd34d965ca77ffcdb2dd2--majestic-shortbread-4a2158.netlify.app/",
+      "image": "/toast.png"
+    },
+    {
+      "title": "Wordle",
+      "description": "A website that let users play a word puzzle game in which you have to crack a five letter word in six attempts",
+      "github": "https://github.com/Rohanarora17/wordle",
+      "demo": "https://stalwart-tarsier-046538.netlify.app/",
+      "image": "/wordle.png"
+    },
+    {
+      "title": "File Share",
+      "description": "A website that lets you encrypt your file and share it with other users",
+      "github": "https://github.com/Rohanarora17/fileshare",
+      "demo": "https://fileshare-xer8.onrender.com",
+      "image": "/fileshare.png"
+    }
+    
+  ],
+  "skills": [
+    {
+      "name": "Typescript",
+      "icon": "/typescript.svg",
+      "hover": "#3178c6"
+    },
+    {
+      "name": "Next JS",
+      "icon": "/NextJs.svg",
+      "hover": "#3178c6"
+    },
+    {
+      "name": "React JS",
+      "icon": "/reactjs.svg",
+      "hover": "#3178c6"
+    },
+
+    {
+      "name": "Javascript",
+      "icon": "/javascript.svg",
+      "hover": "#3178c6"
+    },
+    {
+      "name": "Node JS",
+      "icon": "/node.svg",
+      "hover": "#3178c6"
+    },
+    {
+      "name": "Python",
+      "icon": "/python.svg",
+      "hover": "#3178c6"
+    },
+    {
+      "name": "SQL / NoSQL",
+      "icon": "/database.svg",
+      "hover": "#3178c6"
+    },
+    {
+      "name": "Git / Github",
+      "icon": "/git.svg",
+      "hover": "#3178c6"
+    },
+    
+    {
+      "name": "Tailwind CSS",
+      "icon": "/tailwind.svg",
+      "hover": "#3178c6"
+    }
+  ]
+}

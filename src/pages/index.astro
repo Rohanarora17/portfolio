@@ -1,0 +1,148 @@
+---
+import Card from '../components/Card.astro';
+import Contact from '../components/Contact';
+import SkillCard from '../components/SkillCard.astro';
+import { skills, projects } from '../constants.json';
+import Layout from '../layouts/Layout.astro';
+---
+
+<script src="/app.js" defer is:inline></script>
+<Layout title="Rohan's Portfolio">
+  <!-- Landing Page section  -->
+  <section
+    id="home"
+    class="hide h-[100vh] bg-[url('/hero.svg')] md:bg-60% bg-95% bg-no-repeat bg-left-bottom"
+  >
+    <div class="flex flex-row justify-end items-center md:pr-20 h-full">
+      <p class="font-bold flex flex-col md:m-0 ml-20">
+        <span class="md:text-8xl text-6xl"> Hi , I'm Rohan.</span>
+        <span class="md:text-6xl text-4xl"
+          >Just a <span class="text-mint-green">wannabe</span></span
+        >
+        <span class="md:text-6xl text-4xl">Full Stack Dev.</span>
+      </p>
+    </div>
+  </section>
+  <section class="hide md:min-h-[100vh] xl:min-h-[80vh]" id="skills">
+    <div class="flex flex-col gap-6 my-10 mx-10 md:mx-40">
+      <h1 class="text-6xl font-bold my-10">About Me</h1>
+      <div class="flex justify-center items-center w-full h-full">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-20 place-content-center"
+        >
+          <div class="col-span-2 flex flex-col gap-10 h-full justify-center">
+            <div
+              class="flex flex-col gap-6 font-semi-bold whitespace-wrap list-inside text-lg"
+            >
+              <p class="list-item">
+                My name is <span class="font-bold">Rohan Arora</span>, and I'm
+                a 22-year-old Full-Stack Developer living in Jalandhar, Punjab.
+              </p>
+              <p class="list-item">
+                I'm currently pursuing <span class="font-bold"
+                  >B.tech in Computer Science and Engineering</span
+                > at Lovely Professional University.
+              </p>
+              <p class="list-item">
+                I'm passionate about exploring new technologies and trying out
+                cutting-edge innovations.
+              </p>
+            </div>
+            <div class="flex gap-4">
+              <div class="relative group">
+                <span
+                  class="group-hover:opacity-100 transition-opacity bg-light-purple p-1 text-sm text-gray-100 rounded-md absolute left-1/2 -translate-x-1/2 -translate-y-[180%] opacity-0 m-4 mx-auto"
+                >
+                  Resume
+                </span>
+                <a
+                  href="/resume.pdf"
+                  class="hover:scale-125 transition-all"
+                  target="_blank"
+                >
+                  <img src="/resume.svg" class="w-10" />
+                </a>
+              </div>
+              <div class="relative group">
+                <span
+                  class="group-hover:opacity-100 transition-opacity bg-light-purple p-1 text-sm text-gray-100 rounded-md absolute left-1/2 -translate-x-1/2 -translate-y-[180%] opacity-0 m-4 mx-auto"
+                >
+                  Github
+                </span>
+                <a
+                  href="https://github.com/Rohanarora17/"
+                  class="hover:scale-125 transition-all"
+                  target="_blank"
+                >
+                  <img src="/github.svg" class="w-10" />
+                </a>
+              </div>
+              <div class="relative group">
+                <span
+                  class="group-hover:opacity-100 transition-opacity bg-light-purple p-1 text-sm text-gray-100 rounded-md absolute left-1/2 -translate-x-1/2 -translate-y-[180%] opacity-0 m-4 mx-auto"
+                >
+                  LinkedIn
+                </span>
+                <a
+                  href="https://www.linkedin.com/in/rohan221b/"
+                  class="hover:scale-125 transition-all"
+                  target="_blank"
+                >
+                  <img src="/linkedin.svg" class="w-10" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <img
+            src="/about-hero.svg"
+            alt="hero image"
+            class="min-w-[500px] md:block hidden"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Skills Section  -->
+  <section class="hide md:min-h-[100vh] xl:min-h-[80vh]" id="skills">
+    <div class="flex flex-col gap-6 my-10 mx-10 md:mx-40">
+      <h1 class="text-6xl font-bold my-10">Skills</h1>
+      <div class="flex justify-center items-center w-full h-full">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-20">
+          {
+            skills.map((skill) => (
+              <SkillCard
+                image={skill.icon}
+                skill={skill.name}
+                hover={skill.hover}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Project Section  -->
+  <section class="hide md:min-h-[100vh] xl:min-h-[80vh]" id="projects">
+    <div class="flex flex-col gap-6 my-10 mx-10 md:mx-40">
+      <h1 class="text-6xl font-bold my-10">Projects</h1>
+      <div class="w-full flex items-center justify-center 2xl:px-10">
+        <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-20">
+          {
+            projects.map((project) => (
+              <Card
+                title={project.title}
+                description={project.description}
+                github={project.github}
+                demo={project.demo}
+                image={project.image}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+  <Contact client:load />
+
+  <style></style>
+</Layout>
